@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos en Cafetería Lekker</title>
+    <link rel="stylesheet" href="style-eventos.css">
+
+</head>
+
+<body>
+
+    <!--Barra de Navegacion-->
+
+    <nav id="navbar">
+        <img class="logo" id="audio" src="imgs/LOGO-LEKKER.png" alt="">
+        <ul class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="menu.html">Menú</a>
+            <a href="#">Eventos</a>
+            <a href="contacto.html" class="ctn">Contacto</a>
+        </ul>
+
+        <!--Boton del menu de hamburguesa-->
+
+        <img src="imgs/menu-btn.png" alt="" class="menu-btn">
+    </nav>
+
+    <main>
+        <section class="banner">
+            <h1 class="titulo-banner">EVENTOS DE TEMPORADA</h1>
+            <h4 class="subtitulo-banner">DESCUENTOS Y BEBIDAS EXCLUSIVAS</h4>
+        </section>
+        <div class="contenedor">
+            <div class="caja-blanca">
+                <div class="contenedor">
+                    <img src="imgs/hallcoff1.jpg" alt="" class="imagen">
+                    <h2 class="titulo-producto">Dulce o' truco</h2>
+                    <p class="parrafo-producto">Café al gusto con espolvoreado con diseño de calabaza</p>
+                </div>
+                <div class="contenedor">
+                    <img src="imgs/aracoffee.jpg" alt="" class="imagen">
+                    <h2 class="titulo-producto">Telaraña express</h2>
+                    <p class="parrafo-producto">Expresso con diseño de terlaraña</p>
+                </div>
+                <div class="contenedor">
+                    <img src="imgs/pumpkin-pie.jpg" alt="" class="imagen">
+                    <h2 class="titulo-producto">Pastel de calabaza</h2>
+                    <p class="parrafo-producto">1 rebanada de pastel de calabaza hecho en casa</p>
+                </div>
+                <div class="contenedor">
+                    <img src="imgs/Brownie-dhalleweene.jpg" alt="" class="imagen">
+                    <h2 class="titulo-producto">Spooky Brownies</h2>
+                    <p class="parrafo-producto">2x1 en brownies decorados de la temporada</p>
+                </div>
+            </div>
+        </div>
+        <section class="banner-prox">
+            <div class="texto-banner-prox">
+                <h1 class="titulo-banner-prox">PROXIMAMENTE</h1>
+                <p class="parrafo-banner">No te pierdas de nuestras proximas <br>
+                    ofertas navideñas y futuros <br>eventos y colaboraciones.</p>
+            </div>
+            <div class="teaser-prox">
+                <img src="imgs/teaser-nav.png" alt="" class="imagen-banner-prox">
+            </div>
+
+        </section>
+
+
+    </main>
+
+    <!-- Footer o Pie de pagina -->
+    <footer>
+        <section id="footer-content">
+            <div class="info">
+                <img src="imgs/LOGO-LEKKER.png" class="logo-footer" id="audio" alt="">
+            </div>
+            <div class="der-poli">
+                <h3>Derechos de Autor Politica de Privacidad</h3>
+                <p>
+                    Esta página fue creada por Java-Cristianos Corp. no se permite la reproducción total o parcial de
+                    esta página, ni su transmisión en cualquier forma o por cualquier medio (electrónico, mecánico,
+                    fotocopia, grabación u otros) sin la autorización previa.
+                <p>
+                    Contáctenos antes realizar alguna acción con la página. La infracción de dichos derechos puede
+                    constituir un delito contra la propiedad.
+                </p>
+                <p>
+                    En esta página no se recopila datos personales de los visitantes.
+                </p>
+                </p>
+            </div>
+            <div class="redes">
+                <a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F%3Flocale%3Des_LA"class="red"><img src="imgs/fblogo.png" alt=""></a>
+                <a href="https://x.com/?lang=es" class="red"><img src="imgs/twlogo.png" alt=""></a>
+                <a href="https://www.instagram.com/?hl=es" class="red"><img src="imgs/inslogo.png" alt=""></a>
+            </div>
+        </section>
+
+    </footer>
+    <div class="copyrais">
+        <small>&copy; 2024 <b>Java-Cristianos Corp.</b> &copy; 2024 <b>Cafetería Lekker</b>. Todos los derechos
+            reservados.</small>
+    </div>
+
+    <!-- La parte chida, los scripts -->
+    <script>
+        // Menu de Hamburguesa
+        const menuBtn = document.querySelector('.menu-btn')
+        const navlinks = document.querySelector('.nav-links')
+
+        menuBtn.addEventListener('click', () => {
+            navlinks.classList.toggle('mobile-menu')
+        })
+        // Bienvenido (al presionar el logo se escuchara una bienvenida solo por diversion)
+        const audio = new Audio('imgs/audio-de-eventos.wav');
+
+        function playAudio(event) {
+            event.preventDefault(); // Prevenir el comportamiento predeterminado del enlace
+            audio.play(); // Reproducir el audio
+        }
+
+        const playAudioLink = document.getElementById('audio');
+
+        playAudioLink.addEventListener('click', playAudio);
+
+    </script>
+
+</body>
+
+</html>

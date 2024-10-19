@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    /* Colores solidos */
+    --rojo: #c82f3e;
+    --azul: #3170a8;
+    --amarillo: #feee33;
+    --blanco: #ffffff;
+    --blanco2: #f1f1f1;
+    --negro: #121212;
+    /* Colores Oscuros */
+    --rojoOsc: #6b0c16;
+    --azulOsc: #053660;
+    --amarilloOsc: #5c5614;
+    /* Colores Brillosos */
+    --rojoBri: #ffa2ac;
+    --azulBri: #7ec3ff;
+    --amarilloBri: #ffef96;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Merriweather Sans", sans-serif;
+    font-style: normal;
+    font-optical-sizing: auto;
+}
+
+html {
+    scroll-behavior: smooth;
+    /*Esto hace que el scroll sea fluido */
+}
+
+body,
+html {
+    overflow-x: hidden;
+    /*Esto quita la barra de deslizamiento horizontal*/
+}
+
+/* Titulos y Parrafos */
+
+h1 {
+    font-size: 7vmin;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: italic;
+    color: var(--amarilloBri);
+}
+
+h2 {
+    font-size: 4vmin;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--azul);
+    border-bottom: solid 5px var(--rojo);
+}
+
+h3 {
+    font-size: 3vmin;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    border-bottom: solid 5px var(--amarilloOsc);
+}
+
+p {
+    font-size: 16px;
+    color: var(--negro);
+    font-family: "Merriweather Sans", sans-serif;
+    font-style: normal;
+}
+
+/* Barra de Navegacion*/
+#navbar {
+    background-color: var(--rojo);
+    position: relative;
+    border-bottom: solid 5px var(--negro);
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.logo {
+    width: 6rem;
+    display: flex;
+    margin-left: 20px;
+    transition: 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.2);
+}
+
+.nav-links {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.nav-links a {
+    background-color: var(--amarillo);
+    box-shadow: 2px 2px 5px var(--rojoOsc);
+    color: var(--amarilloOsc);
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0;
+    width: 18%;
+    margin: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: var(--amarilloBri);
+    box-shadow: 0px 5px 25px 8px var(--amarillo);
+    transform: scale(1.2);
+}
+
+.menu-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 60px;
+    cursor: pointer;
+    display: none;
+}
+
+/* ----------------------BANNERS-------------------------*/
+.banner {
+    height: 70vh;
+    width: 100%;
+    background-image: url(imgs/bannerhall.png);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--amarillo);
+}
+
+.titulo-banner {
+    font-size: 3rem;
+}
+
+.subtitulo-banner {
+    font-size: 1.5rem;
+    color: var(--blanco);
+}
+
+.banner-prox {
+    height: 70vh;
+    width: 100%;
+    background-image: url(imgs/banner-navidad.png);
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: var(--amarillo);
+}
+
+.texto-banner-prox {
+    /* background-color: var(--blanco); */
+    min-width: 50%;
+}
+
+.titulo-banner-prox {
+    font-size: 3rem;
+    color: var(--rojoOsc);
+    margin-bottom: 3%;
+    margin-top: 11%;
+    text-align: center;
+}
+
+.parrafo-banner {
+    font-size: 1.5rem;
+    color: var(--azulOsc);
+    margin-bottom: 11%;
+    text-align: center;
+}
+
+.teaser-prox {
+    width: 40%;
+    background-size: cover;
+    margin: 1%;
+}
+
+.imagen-banner-prox {
+    width: 100%;
+}
+
+/* ----------------------CONTENEDOR-------------------------*/
+.contenedor {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-width: 25%;
+    height: auto;
+
+}
+
+/* ----------------------MAIN-------------------------*/
+main {
+    width: 100%;
+    height: auto;
+    background-image: url(imgs/De-Stijl-1.jpg);
+}
+
+.caja-blanca {
+    margin: 3%;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--blanco);
+    border: var(--negro) 3px solid;
+}
+
+.imagen {
+
+    margin: 6%;
+    max-width: 80%;
+    max-height: 50%;
+
+}
+
+.titulo-producto {
+    text-align: center;
+    margin: 2%;
+}
+
+.parrafo-producto {
+    text-align: center;
+    margin: 2%;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    height: auto;
+    padding: 15px 0;
+    background-color: var(--azulOsc);
+    border-top: solid 5px var(--negro);
+}
+
+#footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+.info {
+    width: 15%;
+    display: flex;
+    justify-content: center
+}
+
+.der-poli {
+    width: 50%;
+    padding: 10px;
+}
+
+.der-poli h3 {
+    color: var(--amarilloBri);
+    margin: 10px 0;
+}
+
+.der-poli p {
+    color: var(--blanco2);
+    margin: 10px 0;
+}
+
+.logo-footer {
+    width: 9rem;
+    transition: 0.3s;
+}
+
+.logo-footer:hover {
+    transform: scale(1.2);
+}
+
+.redes {
+    width: 15%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.red {
+    width: 40px;
+    height: 40px;
+    background-color: var(--blanco2);
+    border: solid 2px var(--negro);
+    box-shadow: 2px 2px 5px var(--negro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.red img {
+    width: 85%;
+}
+
+.red:hover {
+    background-color: var(--amarilloBri);
+    box-shadow: 0px 5px 25px 8px var(--amarillo);
+    transform: scale(1.2);
+}
+
+.copyrais {
+    background-color: var(--negro);
+    width: 100%;
+    padding: 15px 10px;
+    text-align: center;
+    color: var(--blanco2);
+    font-size: 12px;
+}
+
+/* ----------------------RESPONSIVO-------------------------*/
+
+@media screen and (max-width: 930px) {
+
+    /* Menu De Hamburguesa */
+    .menu-btn {
+        display: block;
+    }
+
+    #navbar {
+        padding: 0;
+    }
+
+    #navbar .logo {
+        position: absolute;
+        top: 10px;
+        left: 30px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        height: 95vh;
+        justify-content: center;
+        background-color: var(--rojo);
+        margin-top: -550px;
+        transition: all 0.5s ease;
+    }
+
+    .mobile-menu {
+        margin-top: 0px;
+    }
+
+    .nav-links a {
+        margin: 25px auto;
+        width: 30%;
+    }
+
+
+    /* ----------------------MAIN-------------------------*/
+    .caja-blanca {
+        margin: 7%;
+        flex-direction: column;
+    }
+
+    .imagen {
+        margin: 2%;
+        max-width: 40%;
+    }
+
+    .titulo-producto {
+        margin: 1%;
+    }
+
+    .parrafo-producto {
+        margin: 3%;
+    }
+
+
+    /* ----------------------BANNER-------------------------*/
+
+    .banner {
+        height: 55vh;
+    }
+
+    /* ----------------------BANNER-PROX-------------------------*/
+
+    .banner-prox {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .texto-banner-prox {
+        background-color: var(--blanco);
+        margin: 3%;
+    }
+
+    .teaser-prox {
+        width: 50%;
+        margin: 2%;
+    }
+
+    .titulo-banner-prox {
+        font-size: 1.5rem;
+    }
+
+    .parrafo-banner {
+        font-size: 1rem;
+    }
+
+    /* Footer Responsive */
+    .redes {
+        flex-direction: column;
+    }
+
+    .red {
+        margin: 10px;
+    }
+
+    .logo-footer {
+        width: 6rem;
+    }
+}
